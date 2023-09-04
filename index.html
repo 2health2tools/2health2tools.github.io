@@ -1,0 +1,114 @@
+<index html>
+<html>
+<head>
+<style>
+  body {
+    text-align: center;
+    background-image: url('background.jpg'); /* Change 'background.jpg' to the actual path of your image */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+
+  h1 {
+    font-family: 'Helvetica Bold1', sans-serif;
+    font-size: 100px;
+    color: white;
+    text-shadow: 2px 2px 8px gray;
+    transition: color 0.3s, text-shadow 0.3s;
+    cursor: pointer;
+  }
+
+  h1:hover {
+    color: #ffefa2; /* Replace yellow with ffefa2 */
+    text-shadow: 2px 2px 8px darkyellow;
+  }
+
+  .custom-box {
+    border: 2px solid #ffefa2; /* Banana-colored outline */
+    background-color: rgba(51, 51, 51, 0.8); /* Semi-transparent gray background */
+    border-radius: 10px; /* Rounded corners */
+    padding: 20px; /* Add some padding for text */
+    color: #ffefa2; /* Replace yellow with ffefa2 */
+    font-family: 'Helvetica Bold', sans-serif;
+    font-weight: bold;
+    text-align: left;
+    margin: 0 auto;
+    max-width: 800px;
+  }
+
+  .ticker {
+    animation: ticker 10s linear infinite; /* Add ticker animation */
+  }
+
+  @keyframes ticker {
+    0% {
+      background-position: 0 0;
+    }
+    100% {
+      background-position: 100% 0;
+    }
+  }
+  
+  h2 {
+    font-size: 24px;
+    margin-top: 0;
+  }
+
+  p {
+    font-size: 16px;
+  }
+
+  .donate-button {
+    background-color: #ffefa2; /* Replace yellow with ffefa2 */
+    color: #333333; /* Darkest gray text */
+    border: none;
+    padding: 10px 20px; /* Button padding */
+    border-radius: 5px; /* Rounded button */
+    font-family: 'Helvetica Bold', sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+  }
+</style>
+</head>
+<body>
+
+<h1 id="playMusic" class="ticker">2Health2Tools</h1>
+
+<audio id="music">
+  <source src="https://drive.google.com/uc?export=download&id=1aIO6MgEvfNIXGwm1uCrBPufbj9y2Sl3u" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+
+<div class="custom-box">
+  <h2>About 2Health2Tools</h2>
+  <p>2health2tools is an Anarchy server. This means no rules, no bans/kicks, and no admin interference! In this server you can pretty much do whatever you want, start bases, make new friends, and attack anyone that gets in your way! The IP to connect is (soon). It has been on the same world since the 1st of July 2022, and the map will never reset.</p>
+  <p>DISCORD: (soon)</p>
+  <p>IP: (soon)</p>
+</div>
+
+<div class="custom-box">
+  <h2>Support Us</h2>
+  <p>The server is hosted for fun, and I do not intend to make any money from it. However, you may feel free to donate below:</p>
+  <br>
+  <a class="donate-button" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">DONATE</a>
+</div>
+
+<script>
+  var music = document.getElementById('music');
+  var playMusicTitle = document.getElementById('playMusic');
+
+  playMusicTitle.addEventListener('click', function() {
+      if (music.paused) {
+          music.play();
+      } else {
+          music.pause();
+          music.currentTime = 0; // Reset audio to the beginning
+      }
+  });
+</script>
+
+</body>
+</html>
